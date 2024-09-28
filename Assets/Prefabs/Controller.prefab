@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4108398623948565451}
+  - component: {fileID: 45544173688058659}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -31,3 +32,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45544173688058659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117766400141268475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb75381a0b0cc51be97bd897ebf1fa05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mountainPrefab: {fileID: 4628493939417154619, guid: 408cde470b97ce1069457015f4edfd60, type: 3}
+  genX: 12
+  genY: 1.2
+  timer: 2.5
+  canvasPontuation: {fileID: 0}
+  nextLevel: 5
+  canvasLevel: {fileID: 0}
+  levelUpSound: {fileID: 8300000, guid: d2abcde7ce87af052ada7b2fff9803e6, type: 3}
+  camPos: {fileID: 0}

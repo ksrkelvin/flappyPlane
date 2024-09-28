@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] private float speed;
+    [SerializeField] private float limitArea;
+    [SerializeField] private GameObject puff;
 
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -23,9 +25,16 @@ public class PlayerController : MonoBehaviour
 
         SpeedLimit();
         Actions();
+        AreaLimiter();
 
+    }
 
-
+    public void AreaLimiter(){
+        if (transform.position.y > limitArea || transform.position.y < -limitArea)
+        {
+            SceneManager.LoadScene("menu");
+        }
+        
     }
 
     public void SpeedLimit()
@@ -50,12 +59,16 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = Vector2.up * speed;
 
+        GameObject newPuff = Instantiate(puff, transform.position, Quaternion.identity);
+
+        Destroy(newPuff, 1f);
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         // SceneManager.LoadScene(0);
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene("menu");
 
        
     }

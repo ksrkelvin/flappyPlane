@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  limitArea: 5.5
+  puff: {fileID: 2857506968521772810, guid: b77e166037c74528da21681c64769bcd, type: 3}
 --- !u!95 &2435140077292140058
 Animator:
   serializedVersion: 5
