@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour
 
     public void SetPontuation()
     {
-        pontuation += Time.deltaTime;
+        pontuation += Time.deltaTime * level;
         canvasPontuation.text = Mathf.Round(pontuation).ToString();
     }
 
